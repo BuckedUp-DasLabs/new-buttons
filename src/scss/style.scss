@@ -7,7 +7,7 @@
   align-items: center;
   color: #000;
   width: 100%;
-  border-radius: 1.54888rem;
+  border-radius: 100px;
 }
 
 .products-list {
@@ -31,7 +31,7 @@
     font-size: 0.87125rem;
     font-style: normal;
     font-weight: 900;
-    line-height: normal;
+    line-height: 1;
     padding: 0.94rem 1.5rem;
     border-radius: 1.54888rem;
     border: 1.549px solid #ff2321;
@@ -79,9 +79,10 @@
       justify-content: flex-start;
       gap: 0.75rem;
       font-size: 0.87125rem;
+      text-align: left;
+      line-height: 1;
       font-style: normal;
       font-weight: 900;
-      line-height: normal;
       border: 0.0994rem solid #e2e2e2;
       padding: 0.88rem 1rem;
       &:hover,&:focus{
@@ -89,6 +90,7 @@
       }
       .label-ball {
         display: flex;
+        flex-shrink: 0;
         width: 1.125rem;
         height: 1.125rem;
         border: 1px solid black;
