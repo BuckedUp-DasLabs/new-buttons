@@ -63,17 +63,26 @@
       max-height: 7.5rem;
       object-fit: scale-down;
     }
-    input:checked + label {
+    input:checked + label .label {
       border-color: #ff2321;
       background-color: #ffe3e3;
       .label-ball:after {
         background-color: #f00;
       }
     }
-    input:disabled + label {
+    input:disabled + label .label {
       cursor: not-allowed;
     }
-    label {
+    label{
+      display: block;
+      cursor:pointer;
+      &:hover,&:focus{
+        .label{
+          border-color:#f00;
+        }
+      }
+    }
+    .label {
       @include buttonStyle();
       display: flex;
       justify-content: flex-start;
@@ -85,9 +94,6 @@
       font-weight: 900;
       border: 0.0994rem solid #e2e2e2;
       padding: 0.88rem 1rem;
-      &:hover,&:focus{
-        border-color:#f00;
-      }
       .label-ball {
         display: flex;
         flex-shrink: 0;
@@ -118,7 +124,7 @@
       }
     }
     &:not(.has-dropdown-mobile) {
-      label {
+      .label {
         padding: 1rem;
         border-radius: 100%;
         width: fit-content;

@@ -5,12 +5,15 @@ const createButton = (optionId, valueId, valuePrice, src, text) => {
   const labelText = document.createElement("span");
   const labelBall = document.createElement("span");
   const button = document.createElement("input");
-  wrapper.appendChild(img)
+  const labelContent = document.createElement("span")
   wrapper.appendChild(button)
   wrapper.appendChild(label)
-  label.appendChild(labelBall)
-  label.appendChild(labelText)
+  label.appendChild(img)
+  label.appendChild(labelContent)
+  labelContent.appendChild(labelBall)
+  labelContent.appendChild(labelText)
 
+  labelContent.classList.add("label")
   wrapper.classList.add("button-wrapper")
   labelText.classList.add("label-text")
   labelBall.classList.add("label-ball")
